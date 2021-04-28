@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="icon" type="image/ico" href="/assets/logo.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="/js/profile.js"></script>
+  <link rel="stylesheet" href="/css/profile.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-top">
+    <a class="navbar-brand" href="/">BookShala</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="ml-auto px-2 m-1">
+        <span id="nav-username" class="text-secondary font-weight-bold m-1">
+          <a class="navbar-brand" href="/login">Logout</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <br>
+
+  <h1>Account Details</h1>
+  <table cellspacing="10" cellpadding="10" border="1">
+    <tr>
+      <th>UserId</th>
+      <td>{{user.id}}</td>
+    </tr>
+    <tr>
+      <th>Username</th>
+      <td>{{user.username}}</td>
+    </tr>
+    <tr>
+      <th>Email Id</th>
+      <td>{{user.email}}</td>
+    </tr>
+  </table>
+  <br>
+
+  <h3>CHAT ROOM</h3>
+  <br>
+  <div id="loginBox">
+    <input id="inpUsername" placeholder="Username" readonly value="{{user.username}}">
+    <button id="btnStart">START Chat</button>
+  </div>
+  <br><br>
+
+  <div id="chatBox">
+    <input id="inpToUser" placeholder="Send to">
+    <input id="inpNewMsg" placeholder="New Message">
+    <button id="btnSendMsg">SEND</button>
+    <button id="clearmsg">Clear All Messages</button>
+    <button id="btnEnd">END Chat</button>
+    <ul id="ulMsgs">
+    </ul>
+  </div>
+
+  <br><br>
+
+  <h3>Add A Product To Sell</h3>
+  <br>
+
+  <form action="/addproduct" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label>User Name</label>
+      <input type="text" readonly class="form-control" name="username" value="{{user.username}}">
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <small class="form-text text-muted">Enter the name without use of / or . or , or ' and " only</small>
+      <input type="text" class="form-control" name="name">
+    </div>
+    <div class="form-group">
+      <label>Company</label>
+      <input type="text" class="form-control" name="company">
+    </div>
+    <div class="form-group">
+      <label>Price</label>
+      <small class="form-text text-muted">Enter the price without any comma and decimal only.</small>
+      <input type="text" class="form-control" name="price">
+    </div>
+    <div class="form-group">
+      <label for="avatar">Product Photo</label>
+      <input class="form-control" type="file" name="avatar" id="avatar" placeholder="Product Photo">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <div class="copyright text-center bg-dark text-white py-2">
+    <p class="font-rale font-size-14">&copy; Copyright 2021. Made with 💓 by <a href="https://github.com/sachin235"
+        class="color-second">Sachin Singla</a></p>
+  </div>
+
+</body>
+
+</html>
