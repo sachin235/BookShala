@@ -70,7 +70,7 @@ $(() => {
 				return ret.substring(0, length);
 			}
 
-			document.getElementById("recieptid").innerText = generateHexString(26);
+			document.getElementById("receiptid").innerText = generateHexString(26);
 		});
 	}
 });
