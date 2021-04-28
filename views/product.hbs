@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <link rel="icon" type="image/ico" href="/assets/logo.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.js"></script>
+  <script src="/js/product.js"></script>
+  <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-top">
+    <a class="navbar-brand" href="/">BookShala</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="ml-auto px-2 m-1">
+        <span id="nav-username" class="text-secondary font-weight-bold m-1">
+          <a class="navbar-brand" href="/login">Login</a>
+          &nbsp;&nbsp;
+          <a class="navbar-brand" href="/signup">Signup</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <h1 class="h1 text-center">Products</h1>
+
+  <div class="container my-2">
+    <div class="row" id="products-container">
+    </div>
+  </div>
+
+  <script>
+    loadProductsbyId()
+  </script>
+
+  <div id="container-product">
+  </div>
+
+  <div class="copyright text-center bg-dark text-white py-2">
+    <p class="font-rale font-size-14">&copy; Copyright 2021. Made with 💓 by <a href="https://github.com/sachin235"
+        class="color-second">Sachin Singla</a></p>
+  </div>
+
+</body>
+
+</html>
