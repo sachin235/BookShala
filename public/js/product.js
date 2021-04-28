@@ -37,14 +37,12 @@ function loadProductsbyId() {
           <div>
             <h2>Book Details</h2>
             <div class="card-body">
-              <h4 class="card-title">Product Id : ${p.id}</h4>  
-              <h4 class="card-title">Name : ${p.name}</h4>
-              <h4><p class="card-text">
-                Author/Company : ${p.company}
-                </p></h4>
-              <h4 class="card-subtitle mb-2">Price : Rs. ${p.price}</h4>
-              <h4 class="card-subtitle mb-2">Seller : ${p.username}</h4>
-                Login in to Your Account to contact the Seller Via CHAT ROOM
+              <h4 class="card-subtitle mb-2">Product Id: ${p.id}</h4>  
+              <h4 class="card-subtitle mb-2">Book Name: ${p.name}</h4>
+              <h4 class="card-subtitle mb-2">Author/Company: ${p.company}</h4>
+              <h4 class="card-subtitle mb-2">Price: Rs. ${p.price}</h4>
+              <h4 class="card-subtitle mb-2">Seller Username: ${p.username}</h4>
+                Login in to Your Account to contact the Seller via CHAT ROOM
             </div>
           </div>
           `)
