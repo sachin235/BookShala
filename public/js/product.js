@@ -1,6 +1,6 @@
 function loadProductsbyId() {
-	// let start = document.URL.search("2246/") + 5;
-	let start = document.URL.search(".com/") + 5;
+	let start = document.URL.search("2246/") + 5;
+	// let start = document.URL.search(".com/") + 5;
 	let end = document.URL.search("/product");
 	let id = parseInt(document.URL.slice(start, end));
 
