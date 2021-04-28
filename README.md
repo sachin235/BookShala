@@ -23,3 +23,13 @@ An E-Book Platform to view, sell and purchase books
 - Handlebars
 - Sequelize
 - Socket.io
+
+## Steps to setup the project
+
+- Install Node.js
+- Clone this repository `git clone https://github.com/sachin235/BookShala`
+- Install all the dependencies `npm install`
+- Run the server `node server.js`
+- The website is now running on the localhost!
+
+### The website is live at https://ebookshala.herokuapp.com/
