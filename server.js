@@ -157,7 +157,7 @@ io.on("connection", (socket) => {
 		} else {
 			io.to(data.from).emit("msg_rcvd", {
 				msg:
-					"Reciver is currently not in CHAT ROOM or no user with this username please check and try again !",
+					"Receiver is currently not in CHAT ROOM or no user exists with this username. Please check and try again!",
 			});
 		}
 	});
