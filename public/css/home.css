@@ -1,0 +1,42 @@
+#navbaris {
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+}
+
+#footer {
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	bottom: 0px;
+	background-color: var(--light);
+}
+
+.cart {
+	height: 25px;
+	font-weight: bolder;
+}
+
+img {
+	height: 300px;
+	width: 50px;
+}
+
+.carousel-innerr > .carousel-item img {
+	margin: 0 auto;
+}
+
+.crousel {
+	height: 600px;
+}
+
+.carousel-innerr {
+	background-color: black;
+}
+
+#products-container {
+	flex-wrap: wrap;
+}
+
+#prod {
+	flex-wrap: wrap;
+}
