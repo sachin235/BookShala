@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookShala</title>
+  <link rel="icon" type="image/ico" href="/assets/logo.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.js"></script>
+  <script src="/js/home.js"></script>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-top">
+    <a class="navbar-brand" href="/">BookShala</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <form style="text-align: center;" action="javascript:void();"
+      onsubmit="if(this.t1.value!='')parent.findString(this.t1.value);return(false);"><input type="text" id="t1"
+        name="t1" placeholder="Search Product" size="20"><input type="submit" name="b1" value="Search"></form>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="ml-auto px-2 m-1">
+        <div id="cart" style="display: inline;" class="text-secondary font-weight-bold m-1"></div>
+        <span id="nav-username" class="text-secondary font-weight-bold m-1">
+          &nbsp;&nbsp;
+          <a class="navbar-brand" href="/login">Login</a>
+          &nbsp;&nbsp;
+          <a class="navbar-brand" href="/signup">Signup</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-innerr" id="carousel-inner">
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <h1>Recently Added</h1>
+  <div class="container my-2">
+    <div class="row" id="products-container">
+    </div>
+  </div>
+
+  <script>
+    loadProducts()
+  </script>
+
+  <center>
+    <h3>Mind Refreshing Quotes</h3>
+  </center>
+
+  <br>
+  Confused in choosing from the amazing Books? Read some mind refreshing Quotes!
+  <br>
+
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Richard Phillip Feynman</h4>
+                <p class="card-text">
+                  "I think Nature's imagination is so much greater than man's, she's never gonna let us relax!"</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Alice Walker</h4>
+                <p class="card-text">
+                  "In nature, nothing is perfect and everything is perfect. Trees can be contorted, bent in weird ways,
+                  and they're still beautiful."</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Steve Maraboli</h4>
+                <p class="card-text">
+                  "Plant seeds of happiness, hope, success, and love; it will all come back to you in abundance. This is
+                  the law of nature."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Sameh Elsayed</h4>
+                <p class="card-text">Sometimes while you are so passionately busy building, there will be others as busy
+                  destroying. Do not stop. One day you will notice how high above you get, and how down below they end
+                  up</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Aristotle</h4>
+                <p class="card-text">
+                  "In all things of nature there is something of the marvelous."</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">F. A. Barillas</h4>
+                <p class="card-text">If you are asked to build a castle, don't build it out of sand by the ocean, don't
+                  build it out of ice in the middle of summer. Build it with the best materials, with the best design,
+                  and with the intention to make it last the passing of time. That castle ought to be your legacy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Guy Fieri</h4>
+                <p class="card-text">
+                  "Cooking is all about people. Food is maybe the only universal thing that really has the power to
+                  bring everyone together. No matter what culture, everywhere around the world, people eat together."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Virginia Woolf</h4>
+                <p class="card-text">
+                  "One cannot think well, love well, sleep well, if not has not dined well."</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Alan D Wolfelt</h4>
+                <p class="card-text">“Food is symbolic of love when words are inadequate.” </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="copyright text-center bg-dark text-white py-2">
+    <p class="font-rale font-size-14">&copy; Copyright 2021. Made with 💓 by <a href="https://github.com/sachin235"
+        class="color-second">Sachin Singla</a></p>
+  </div>
+
+</body>
+
+</html>
