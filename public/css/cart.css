@@ -1,0 +1,15 @@
+.watermark {
+	display: none;
+}
+
+@media print {
+	.noprint {
+		visibility: hidden;
+	}
+	.watermark {
+		display: inline;
+	}
+	.printbtn {
+		display: none;
+	}
+}
