@@ -13,3 +13,13 @@ An E-Book Platform to view, sell and purchase books
 - Chat with the other users on platform
 - Mind Refreshing quotes on Homepage
 - Search using keyword of book or author
+
+## Tech stack used
+
+- CSS
+- Bootstrap
+- jQuery
+- Javascript
+- Handlebars
+- Sequelize
+- Socket.io
